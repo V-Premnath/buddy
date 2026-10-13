@@ -1,0 +1,6 @@
+{
+  "name": "The Biryani War Room",
+  "description": "Tactical group biryani voting arena with 3D clay handis, real-time hunger ranking, underground intel, and desi slang roasts.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

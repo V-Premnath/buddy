@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+@theme {
+  --font-bebas: "Bebas Neue", sans-serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --color-charcoal: #1A1A1A;
+  --color-saffron: #FF9933;
+  --color-clay: #8B4513;
+  --color-basmati: #F5F5DC;
+}
+
+.font-bebas {
+  font-family: var(--font-bebas);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Heat-haze shimmer animation for spicy biryanis */
+@keyframes heat-haze {
+  0% {
+    filter: blur(0px) hue-rotate(0deg);
+    transform: translateY(0px) scale(1);
+  }
+  25% {
+    filter: blur(0.6px) hue-rotate(-4deg);
+    transform: translateY(-2px) scale(1.008) skewX(0.5deg);
+  }
+  50% {
+    filter: blur(0px) hue-rotate(4deg);
+    transform: translateY(-4px) scale(1.002) skewX(-0.5deg);
+  }
+  75% {
+    filter: blur(0.7px) hue-rotate(-2deg);
+    transform: translateY(-2px) scale(1.006) skewX(0.4deg);
+  }
+  100% {
+    filter: blur(0px) hue-rotate(0deg);
+    transform: translateY(0px) scale(1);
+  }
+}
+
+.animate-heat-haze {
+  animation: heat-haze 2.5s infinite ease-in-out;
+}
+
+/* Gentle steam rising animation */
+@keyframes steam-rise {
+  0% {
+    opacity: 0.1;
+    transform: translateY(0) scaleX(0.8) scaleY(0.8);
+  }
+  50% {
+    opacity: 0.6;
+    transform: translateY(-25px) scaleX(1.1) scaleY(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50px) scaleX(1.3) scaleY(1.5);
+  }
+}
+
+.animate-steam {
+  animation: steam-rise 2.4s infinite ease-out;
+}
+
+.animate-steam-delayed {
+  animation: steam-rise 2.8s infinite ease-out 0.8s;
+}
+
+.animate-steam-delayed-2 {
+  animation: steam-rise 3.2s infinite ease-out 1.5s;
+}
+
+/* CRT Scanlines for Underground Deep-Web mode */
+.crt-overlay {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.4) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.03),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.03)
+  );
+  background-size: 100% 3px, 6px 100%;
+  pointer-events: none;
+}
+
+/* Street light flicker keyframe */
+@keyframes flicker {
+  0% { opacity: 0.98; }
+  10% { opacity: 0.2; }
+  12% { opacity: 0.9; }
+  20% { opacity: 0.85; }
+  22% { opacity: 0.15; }
+  25% { opacity: 0.92; }
+  50% { opacity: 0.97; }
+  70% { opacity: 0.3; }
+  72% { opacity: 0.94; }
+  100% { opacity: 0.98; }
+}
+
+.animate-flicker {
+  animation: flicker 0.6s ease-in-out 1;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+::-webkit-scrollbar-thumb {
+  background: #333333;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FF9933;
+}
